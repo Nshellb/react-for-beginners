@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+ReactJS로 영화 웹 서비스 만들기 - nomadcoders.co
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+이하 개발노트
 
-In the project directory, you can run:
+#5 [2021 UPDATE] CREATE REACT APP
+#5.0 Introduction
+create-react-app을 사용한 react 프로젝트 만들기
+빠른 개발환경 구축, 개발서버 접근, 자동 새로고침, 즉각적 CSS 반영 등의 편의
 
-### `npm start`
+필요 사항
+Node.js 설치 (nodejs.org) 
+-> console에서 > node -v (버전확인)
+-> console에서 > npx (node 확장 모듈 
+- 모듈을 로컬에 저장하는대신 최신버전을 임시로 가져와 설치후 삭제)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+기존의 react-for-beginners는 삭제한 상태
+(현재 디렉토리에 없음)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> npx create-react-app react-for-beginners
+react app을 설치한다.
 
-### `npm test`
+package.json 
+script 부분은 미리 만들어진 명령들이다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> npm start
+개발용 서버를 통한 프로젝트 실행
 
-### `npm run build`
+src - 모든 코드가 들어갈곳
+index.js - ReactDOM, document.getElementByID 와 같이 
+페이지 랜더링을 위한 최상위 component 실행이 정의 되어있다.
+rendering 부분과 App component의 jsx를 확인할 수 있다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+index.html - index.js의 실행결과를 body~div#root에서 실행한다.
+실제 구동시 보이는 body 이후 3개의 script 구문은 실행시에 자동으로 삽입된다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+실행 화면에 보이는 것과 같이 scr/App.js에서 구문을 수정하면
+자동 재랜더링(Auto-reload)되어 바로 화면에 반영되는것을 확인할 수 있다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+index.js에서 필요없는 부분은 모두 정리한다. 
+(reder구문의 component들을 삭제)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+App.js의 최상위 div를 남겨두고 css들과 모두 삭제한다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+App.test.js, App.css, index.css, logo.svg, reportWebVitals.js, setupTests.js 삭제
+(index.js, App.js만 남는다.)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+(ReactJS 버전이 달라서 강의와 코드 구성이 다르니 참고.)
